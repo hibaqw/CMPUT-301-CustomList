@@ -34,18 +34,26 @@ public class TestListCity {
     public void hasCityTest(){
         createList();
         City city1= new City("Edmonton", "AB");
-        list.addCity(new City("Edmonton", "AB"));
+        list.addCity(city1);
         assertTrue(list.hasCity(city1),"City is in list");
         City city2= new City("Miami", "Florida");
         assertFalse(list.hasCity(city2),"City is NOT list");
 
 
     }
+    @Test
+    /**
+     * this function tests if list contains given city has been succesfully deleted
+     */
+    public void deleteCity(City city){
+        int listSize= list.getCount();
+        City city1= new City("Edmonton", "AB");
+        list.addCity(city1);
+        list.deleteCity(city1);
+        assertEquals(list.getCount(),listSize -1);
 
 
-
-
-
-
-
+    }
 }
+
+
