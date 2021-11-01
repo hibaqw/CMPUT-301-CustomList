@@ -11,16 +11,15 @@ import java.util.ArrayList;
 public class TestListCity {
     private CustomList list;
 
-    @BeforeAll
     public void createList(){
         list = new CustomList(null, new ArrayList<City>());
-
     }
     @Test
     /**
-     * this function tests add functio
+     * this function tests add function
      */
     public void addCityTest(){
+        createList();
         int listSize= list.getCount();
         list.addCity(new City("Halifax","NS"));
         assertEquals(list.getCount(),listSize +1);
