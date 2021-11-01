@@ -63,6 +63,7 @@ public class TestListCity {
     public void countCitiesTest(){
         createList();
         City city1= new City("Edmonton", "AB");
+        list.addCity(city1);
         assertEquals(list.getCount(),1);
         City city2= new City("Miami", "Florida");
         list.addCity(city2);
