@@ -27,15 +27,18 @@ public class TestListCity {
     }
 
     @Test
+    /**
+     * this function tests if list contains given city
+     */
     public void hasCityTest(){
         createList();
         City city= new City("Edmonton", "AB");
         list.addCity(new City("Edmonton", "AB"));
         assertTrue(list.hasCity(city),"City is in list");
 
-
-
     }
+
+
 
 
 
