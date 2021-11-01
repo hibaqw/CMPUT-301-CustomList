@@ -55,6 +55,24 @@ public class TestListCity {
 
 
     }
+
+    @Test
+    /**
+     * this function tests if a list counts the accurate amount of cities
+     */
+    public void countCitiesTest(){
+        createList();
+        City city1= new City("Edmonton", "AB");
+        assertEquals(list.getCount(),1);
+        City city2= new City("Miami", "Florida");
+        list.addCity(city2);
+        assertEquals(list.getCount(),2);
+        list.deleteCity(city1);
+        assertEquals(list.getCount(),1);
+        list.deleteCity(city2);
+        assertEquals(list.getCount(),0);
+    }
+
 }
 
 
